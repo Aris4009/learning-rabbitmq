@@ -14,9 +14,9 @@ import com.rabbitmq.client.ConnectionFactory;
 @RequestMapping("/api/producer")
 public class ProducerController {
 
-	private ConnectionFactory connectionFactory;
+	private final ConnectionFactory connectionFactory;
 
-	public ProducerController(final ConnectionFactory connectionFactory) {
+	public ProducerController(ConnectionFactory connectionFactory) {
 		this.connectionFactory = connectionFactory;
 	}
 
